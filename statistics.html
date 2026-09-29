@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics — ScoreDeck</title>
+  <meta name="description" content="Compare team statistics with a sortable table and a chart of team wins." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="8" fill="#ffb627" />
+          <rect x="8" y="22" width="6" height="10" rx="1.5" fill="#0e1a2b" />
+          <rect x="17" y="15" width="6" height="17" rx="1.5" fill="#0e1a2b" />
+          <rect x="26" y="9" width="6" height="23" rx="1.5" fill="#0e1a2b" />
+        </svg>
+        <span class="brand-name">ScoreDeck</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html" aria-current="page">Statistics</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrap">
+        <h1>Statistics</h1>
+        <p>Compare teams across every sport ScoreDeck tracks. Filter by sport, then select a column heading to sort the table — the chart below updates to match.</p>
+
+        <form class="filter-form" action="#" onsubmit="return false;">
+          <div class="filter-field">
+            <label for="sport-filter">Filter by sport</label>
+            <select id="sport-filter" name="sport">
+              <option value="all">All sports</option>
+              <option value="basketball">Basketball</option>
+              <option value="soccer">Soccer</option>
+              <option value="baseball">Baseball</option>
+            </select>
+          </div>
+          <p class="result-count" id="filter-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="table-scroll">
+          <table id="stats-table">
+            <caption>Team records, sortable by any column</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort-key="team" data-sort-type="text" aria-sort="none">
+                  <button type="button">Team</button>
+                </th>
+                <th scope="col" data-sort-key="sport" data-sort-type="text" aria-sort="none">
+                  <button type="button">Sport</button>
+                </th>
+                <th scope="col" data-sort-key="games" data-sort-type="number" aria-sort="none">
+                  <button type="button">Games</button>
+                </th>
+                <th scope="col" data-sort-key="wins" data-sort-type="number" aria-sort="none">
+                  <button type="button">Wins</button>
+                </th>
+                <th scope="col" data-sort-key="losses" data-sort-type="number" aria-sort="none">
+                  <button type="button">Losses</button>
+                </th>
+                <th scope="col" data-sort-key="winpct" data-sort-type="number" aria-sort="none">
+                  <button type="button">Win %</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-sport="basketball">
+                <td data-cell="team" data-value="Harbor City Comets">Harbor City Comets</td>
+                <td data-cell="sport" data-value="Basketball">Basketball</td>
+                <td data-cell="games" data-value="45" class="stat-num">45</td>
+                <td data-cell="wins" data-value="31" class="stat-num">31</td>
+                <td data-cell="losses" data-value="14" class="stat-num">14</td>
+                <td data-cell="winpct" data-value="0.689" class="stat-num">.689</td>
+              </tr>
+              <tr data-sport="basketball">
+                <td data-cell="team" data-value="Union Square Wolves">Union Square Wolves</td>
+                <td data-cell="sport" data-value="Basketball">Basketball</td>
+                <td data-cell="games" data-value="45" class="stat-num">45</td>
+                <td data-cell="wins" data-value="26" class="stat-num">26</td>
+                <td data-cell="losses" data-value="19" class="stat-num">19</td>
+                <td data-cell="winpct" data-value="0.578" class="stat-num">.578</td>
+              </tr>
+              <tr data-sport="soccer">
+                <td data-cell="team" data-value="Ironbridge FC">Ironbridge FC</td>
+                <td data-cell="sport" data-value="Soccer">Soccer</td>
+                <td data-cell="games" data-value="28" class="stat-num">28</td>
+                <td data-cell="wins" data-value="18" class="stat-num">18</td>
+                <td data-cell="losses" data-value="7" class="stat-num">7</td>
+                <td data-cell="winpct" data-value="0.643" class="stat-num">.643</td>
+              </tr>
+              <tr data-sport="soccer">
+                <td data-cell="team" data-value="Redline United">Redline United</td>
+                <td data-cell="sport" data-value="Soccer">Soccer</td>
+                <td data-cell="games" data-value="28" class="stat-num">28</td>
+                <td data-cell="wins" data-value="14" class="stat-num">14</td>
+                <td data-cell="losses" data-value="9" class="stat-num">9</td>
+                <td data-cell="winpct" data-value="0.500" class="stat-num">.500</td>
+              </tr>
+              <tr data-sport="baseball">
+                <td data-cell="team" data-value="Bayview Anchors">Bayview Anchors</td>
+                <td data-cell="sport" data-value="Baseball">Baseball</td>
+                <td data-cell="games" data-value="144" class="stat-num">144</td>
+                <td data-cell="wins" data-value="88" class="stat-num">88</td>
+                <td data-cell="losses" data-value="56" class="stat-num">56</td>
+                <td data-cell="winpct" data-value="0.611" class="stat-num">.611</td>
+              </tr>
+              <tr data-sport="baseball">
+                <td data-cell="team" data-value="Prairie Thunder">Prairie Thunder</td>
+                <td data-cell="sport" data-value="Baseball">Baseball</td>
+                <td data-cell="games" data-value="144" class="stat-num">144</td>
+                <td data-cell="wins" data-value="79" class="stat-num">79</td>
+                <td data-cell="losses" data-value="65" class="stat-num">65</td>
+                <td data-cell="winpct" data-value="0.549" class="stat-num">.549</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="chart-wrap" style="margin: 1.75rem 0 0;">
+          <figcaption id="chart-caption">Wins by team (updates with the filter and sort above)</figcaption>
+          <svg id="stat-chart" aria-labelledby="chart-caption" width="100%" height="260" role="img"></svg>
+          <p class="visually-hidden">
+            A text summary of this chart's data is available in the sortable table above.
+          </p>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>About</h2>
+        <p>ScoreDeck is a student project built to make sports statistics easier to find and understand.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; <span id="footer-year">2026</span> ScoreDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ScoreDeck</title>
+  <meta name="description" content="Learn about ScoreDeck's purpose, how its statistics are organized, and who built it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="8" fill="#ffb627" />
+          <rect x="8" y="22" width="6" height="10" rx="1.5" fill="#0e1a2b" />
+          <rect x="17" y="15" width="6" height="17" rx="1.5" fill="#0e1a2b" />
+          <rect x="26" y="9" width="6" height="23" rx="1.5" fill="#0e1a2b" />
+        </svg>
+        <span class="brand-name">ScoreDeck</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrap two-col">
+        <div>
+          <h1>About ScoreDeck</h1>
+          <p>ScoreDeck exists to solve a simple problem: sports statistics are scattered across dozens of sites, apps, and broadcasts, and finding a straightforward answer — who's leading the league, how a team's season is going, what a player's numbers look like — takes longer than it should.</p>
+          <p>This site brings teams, players, and their statistics into one place, organized the same way from sport to sport so the numbers are easy to compare and easy to trust.</p>
+
+          <h2>How the statistics are organized</h2>
+          <p>Every sport ScoreDeck tracks — basketball, soccer, and baseball — is organized around the same three building blocks:</p>
+          <ul>
+            <li><strong>Teams</strong> — season record, win percentage, and scoring differential.</li>
+            <li><strong>Players</strong> — a featured roster with games played and the stat categories that matter most for their sport (points and assists in basketball, goals and assists in soccer, batting average and ERA in baseball).</li>
+            <li><strong>League statistics</strong> — a sortable table and chart for comparing teams side by side, filterable by sport.</li>
+          </ul>
+          <p>Data on this site is illustrative, built for a class project rather than pulled from a live sports feed.</p>
+        </div>
+
+        <aside class="info-box" aria-labelledby="creator-heading">
+          <h3 id="creator-heading">About the creator</h3>
+          <p>ScoreDeck was designed and built as a course project focused on web development and web accessibility: creating a repository, building the site with HTML, CSS, and JavaScript, and publishing it with GitHub Pages.</p>
+          <p>Replace this note with your own name, course, and a short line about yourself before you publish.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>About</h2>
+        <p>ScoreDeck is a student project built to make sports statistics easier to find and understand.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; <span id="footer-year">2026</span> ScoreDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
