@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yaad206.github.io/soccer-stats-website/sitemap.xml
