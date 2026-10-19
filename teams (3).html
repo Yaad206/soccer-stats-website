@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams — ScoreDeck</title>
+  <meta name="description" content="Browse basketball, soccer, and baseball teams with records and basic statistics." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://yaad206.github.io/soccer-stats-website/teams.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="#ffb627" />
+          <rect x="8" y="22" width="6" height="10" rx="1.5" fill="#0e1a2b" />
+          <rect x="17" y="15" width="6" height="17" rx="1.5" fill="#0e1a2b" />
+          <rect x="26" y="9" width="6" height="23" rx="1.5" fill="#0e1a2b" />
+        </svg>
+        <span class="brand-name">ScoreDeck</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teams.html" aria-current="page">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrap">
+        <h1>Teams</h1>
+        <p>Every team ScoreDeck tracks, across basketball, soccer, and baseball. Filter by sport, then open a team card for its full record.</p>
+
+        <form class="filter-form" action="#" onsubmit="return false;">
+          <div class="filter-field">
+            <label for="sport-filter">Filter by sport</label>
+            <select id="sport-filter" name="sport">
+              <option value="all">All sports</option>
+              <option value="basketball">Basketball</option>
+              <option value="soccer">Soccer</option>
+              <option value="baseball">Baseball</option>
+            </select>
+          </div>
+          <p class="result-count" id="filter-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="card-grid">
+          <article class="card" data-sport="basketball">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1d6fe0" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">HC</text></svg>
+              </div>
+              <div>
+                <h3>Harbor City Comets</h3>
+                <span class="sport-tag">Basketball</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">31–14</span></div>
+              <div><span class="label">Win %</span><span class="value stat-num">.689</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Points per game</span><span class="stat-num">114.2</span></li>
+                <li><span>Points allowed</span><span class="stat-num">107.8</span></li>
+                <li><span>Home record</span><span class="stat-num">19–3</span></li>
+                <li><span>Away record</span><span class="stat-num">12–11</span></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card" data-sport="basketball">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#4b5563" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">UW</text></svg>
+              </div>
+              <div>
+                <h3>Union Square Wolves</h3>
+                <span class="sport-tag">Basketball</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">26–19</span></div>
+              <div><span class="label">Win %</span><span class="value stat-num">.578</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Points per game</span><span class="stat-num">109.6</span></li>
+                <li><span>Points allowed</span><span class="stat-num">108.9</span></li>
+                <li><span>Home record</span><span class="stat-num">16–7</span></li>
+                <li><span>Away record</span><span class="stat-num">10–12</span></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card" data-sport="soccer">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1f8a52" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">IB</text></svg>
+              </div>
+              <div>
+                <h3>Ironbridge FC</h3>
+                <span class="sport-tag">Soccer</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">18–7–3</span></div>
+              <div><span class="label">Points</span><span class="value stat-num">57</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Goals for</span><span class="stat-num">52</span></li>
+                <li><span>Goals against</span><span class="stat-num">21</span></li>
+                <li><span>Clean sheets</span><span class="stat-num">14</span></li>
+                <li><span>Goal difference</span><span class="stat-num">+31</span></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card" data-sport="soccer">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#c23b3b" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">RU</text></svg>
+              </div>
+              <div>
+                <h3>Redline United</h3>
+                <span class="sport-tag">Soccer</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">14–9–5</span></div>
+              <div><span class="label">Points</span><span class="value stat-num">47</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Goals for</span><span class="stat-num">41</span></li>
+                <li><span>Goals against</span><span class="stat-num">33</span></li>
+                <li><span>Clean sheets</span><span class="stat-num">9</span></li>
+                <li><span>Goal difference</span><span class="stat-num">+8</span></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card" data-sport="baseball">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#0e1a2b" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">BA</text></svg>
+              </div>
+              <div>
+                <h3>Bayview Anchors</h3>
+                <span class="sport-tag">Baseball</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">88–56</span></div>
+              <div><span class="label">Win %</span><span class="value stat-num">.611</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Runs scored</span><span class="stat-num">712</span></li>
+                <li><span>Runs allowed</span><span class="stat-num">598</span></li>
+                <li><span>Home record</span><span class="stat-num">47–24</span></li>
+                <li><span>Away record</span><span class="stat-num">41–32</span></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card" data-sport="baseball">
+            <div class="card-top">
+              <div class="card-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#ffb627" /><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#0e1a2b">PT</text></svg>
+              </div>
+              <div>
+                <h3>Prairie Thunder</h3>
+                <span class="sport-tag">Baseball</span>
+              </div>
+            </div>
+            <div class="record-line">
+              <div><span class="label">Record</span><span class="value stat-num">79–65</span></div>
+              <div><span class="label">Win %</span><span class="value stat-num">.549</span></div>
+            </div>
+            <details class="card-details">
+              <summary>Team details</summary>
+              <ul class="detail-stats">
+                <li><span>Runs scored</span><span class="stat-num">654</span></li>
+                <li><span>Runs allowed</span><span class="stat-num">631</span></li>
+                <li><span>Home record</span><span class="stat-num">43–28</span></li>
+                <li><span>Away record</span><span class="stat-num">36–37</span></li>
+              </ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="wrap">
+        <h2 id="cta-heading">Want to see how these teams stack up?</h2>
+        <p>Put every team side by side in a sortable table with a wins chart.</p>
+        <a class="btn btn-primary" href="statistics.html">Compare teams on the Statistics page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>About</h2>
+        <p>ScoreDeck is a student project built to make sports statistics easier to find and understand.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a class="social-link" href="https://github.com/yaad206/soccer-stats-website" rel="noopener"><svg class="social-icon" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> ScoreDeck on GitHub</a></li>
+          <li><a href="https://github.com/yaad206/soccer-stats-website/issues" rel="noopener">Report a problem or suggest a stat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; <span id="footer-year">2026</span> ScoreDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
