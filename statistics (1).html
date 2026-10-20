@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FC Barcelona Squad Statistics — Players by Position | Blaugrana Squad</title>
+  <meta name="description" content="Sort the FC Barcelona first-team squad by shirt number, name, or position, see a chart of players by position, and search with Quick Finder." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="canonical" href="https://yaad206.github.io/soccer-stats-website/statistics.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="images/fc-barcelona-crest.png" width="40" height="40" alt="FC Barcelona crest" />
+        <span class="brand-name">Blaugrana Squad</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menu
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html" aria-current="page">Statistics</a></li>
+          <li><a href="club.html">Club</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="stripe-bar"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="wrap">
+        <h1>Squad Statistics</h1>
+        <p>The FC Barcelona first team in numbers. Filter by position, then select a column heading to sort the table. The chart below updates to match what is shown.</p>
+
+        <form class="filter-form" action="#" onsubmit="return false;">
+          <div class="filter-field">
+            <label for="position-filter">Filter by position</label>
+            <select id="position-filter" name="position">
+              <option value="all">All positions</option>
+              <option value="goalkeeper">Goalkeepers</option>
+              <option value="defender">Defenders</option>
+              <option value="midfielder">Midfielders</option>
+              <option value="forward">Forwards</option>
+            </select>
+          </div>
+          <p class="result-count" id="filter-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="table-scroll">
+          <table id="stats-table">
+            <caption>First-team squad, sortable by number, player, or position</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort-key="number" data-sort-type="number" aria-sort="ascending"><button type="button">No.</button></th>
+                <th scope="col" data-sort-key="player" data-sort-type="text" aria-sort="none"><button type="button">Player</button></th>
+                <th scope="col" data-sort-key="position" data-sort-type="text" aria-sort="none"><button type="button">Position</button></th>
+                <th scope="col">Official profile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-position="goalkeeper">
+                <td data-cell="number" data-value="1" class="stat-num">1</td>
+                <td data-cell="player" data-value="Joan García">Joan García</td>
+                <td data-cell="position" data-value="Goalkeeper">Goalkeeper</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/110491/joan-garcia" rel="noopener">Profile<span class="visually-hidden">: Joan García</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="2" class="stat-num">2</td>
+                <td data-cell="player" data-value="João Cancelo">João Cancelo</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/5051/joao-pedro-cavaco-cancelo" rel="noopener">Profile<span class="visually-hidden">: João Cancelo</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="3" class="stat-num">3</td>
+                <td data-cell="player" data-value="Alejandro Balde">Alejandro Balde</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/68906/alejandro-balde" rel="noopener">Profile<span class="visually-hidden">: Alejandro Balde</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="4" class="stat-num">4</td>
+                <td data-cell="player" data-value="Brian Fariñas">Brian Fariñas</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/140515/brian-farinas" rel="noopener">Profile<span class="visually-hidden">: Brian Fariñas</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="5" class="stat-num">5</td>
+                <td data-cell="player" data-value="Pau Cubarsí">Pau Cubarsí</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/129400/pau-cubarsi" rel="noopener">Profile<span class="visually-hidden">: Pau Cubarsí</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="6" class="stat-num">6</td>
+                <td data-cell="player" data-value="Gavi">Gavi</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/116719/pablo-paez-gavira" rel="noopener">Profile<span class="visually-hidden">: Gavi</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="7" class="stat-num">7</td>
+                <td data-cell="player" data-value="Fermín López">Fermín López</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/118929/fermin-lopez" rel="noopener">Profile<span class="visually-hidden">: Fermín López</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="8" class="stat-num">8</td>
+                <td data-cell="player" data-value="Pedri">Pedri</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/70486/pedro-gonzalez-lopez" rel="noopener">Profile<span class="visually-hidden">: Pedri</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="9" class="stat-num">9</td>
+                <td data-cell="player" data-value="Gabriel Jesus">Gabriel Jesus</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/19680/gabriel-fernando-de-jesus" rel="noopener">Profile<span class="visually-hidden">: Gabriel Jesus</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="10" class="stat-num">10</td>
+                <td data-cell="player" data-value="Lamine Yamal">Lamine Yamal</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/129404/lamine-yamal-nasraoui-ebana" rel="noopener">Profile<span class="visually-hidden">: Lamine Yamal</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="11" class="stat-num">11</td>
+                <td data-cell="player" data-value="Raphinha">Raphinha</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/24156/raphael-dias-belloli" rel="noopener">Profile<span class="visually-hidden">: Raphinha</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="12" class="stat-num">12</td>
+                <td data-cell="player" data-value="Xavi Espart">Xavi Espart</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/141001/xavi-espart" rel="noopener">Profile<span class="visually-hidden">: Xavi Espart</span></a></td>
+              </tr>
+              <tr data-position="goalkeeper">
+                <td data-cell="number" data-value="13" class="stat-num">13</td>
+                <td data-cell="player" data-value="Wojciech Szczęsny">Wojciech Szczęsny</td>
+                <td data-cell="position" data-value="Goalkeeper">Goalkeeper</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/3543/wojciech-szczesny" rel="noopener">Profile<span class="visually-hidden">: Wojciech Szczęsny</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="14" class="stat-num">14</td>
+                <td data-cell="player" data-value="Karim Adeyemi">Karim Adeyemi</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/52163/karim-adeyemi" rel="noopener">Profile<span class="visually-hidden">: Karim Adeyemi</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="15" class="stat-num">15</td>
+                <td data-cell="player" data-value="Andreas Christensen">Andreas Christensen</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/4495/andreas-christensen" rel="noopener">Profile<span class="visually-hidden">: Andreas Christensen</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="16" class="stat-num">16</td>
+                <td data-cell="player" data-value="Rodri">Rodri</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/16286/rodrigo-hernandez-cascante" rel="noopener">Profile<span class="visually-hidden">: Rodri</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="17" class="stat-num">17</td>
+                <td data-cell="player" data-value="Anthony Gordon">Anthony Gordon</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/23747/anthony-gordon" rel="noopener">Profile<span class="visually-hidden">: Anthony Gordon</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="18" class="stat-num">18</td>
+                <td data-cell="player" data-value="Gerard Martín">Gerard Martín</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/111861/gerard-martin" rel="noopener">Profile<span class="visually-hidden">: Gerard Martín</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="19" class="stat-num">19</td>
+                <td data-cell="player" data-value="Roony Bardghji">Roony Bardghji</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/123727/roony-bardghji" rel="noopener">Profile<span class="visually-hidden">: Roony Bardghji</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="20" class="stat-num">20</td>
+                <td data-cell="player" data-value="Dani Olmo">Dani Olmo</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/16677/dani-olmo" rel="noopener">Profile<span class="visually-hidden">: Dani Olmo</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="21" class="stat-num">21</td>
+                <td data-cell="player" data-value="Frenkie de Jong">Frenkie de Jong</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/16291/frenkie-de-jong" rel="noopener">Profile<span class="visually-hidden">: Frenkie de Jong</span></a></td>
+              </tr>
+              <tr data-position="midfielder">
+                <td data-cell="number" data-value="22" class="stat-num">22</td>
+                <td data-cell="player" data-value="Marc Bernal">Marc Bernal</td>
+                <td data-cell="position" data-value="Midfielder">Midfielder</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/141411/marc-bernal" rel="noopener">Profile<span class="visually-hidden">: Marc Bernal</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="23" class="stat-num">23</td>
+                <td data-cell="player" data-value="Jules Koundé">Jules Koundé</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/15552/jules-kounde" rel="noopener">Profile<span class="visually-hidden">: Jules Koundé</span></a></td>
+              </tr>
+              <tr data-position="defender">
+                <td data-cell="number" data-value="24" class="stat-num">24</td>
+                <td data-cell="player" data-value="Eric García">Eric García</td>
+                <td data-cell="position" data-value="Defender">Defender</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/24635/eric-garcia" rel="noopener">Profile<span class="visually-hidden">: Eric García</span></a></td>
+              </tr>
+              <tr data-position="goalkeeper">
+                <td data-cell="number" data-value="25" class="stat-num">25</td>
+                <td data-cell="player" data-value="Dominik Livaković">Dominik Livaković</td>
+                <td data-cell="position" data-value="Goalkeeper">Goalkeeper</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/16668/dominik-livakovic" rel="noopener">Profile<span class="visually-hidden">: Dominik Livaković</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="27" class="stat-num">27</td>
+                <td data-cell="player" data-value="Jesse Bisiwu">Jesse Bisiwu</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/136745/jesse-bisiwu" rel="noopener">Profile<span class="visually-hidden">: Jesse Bisiwu</span></a></td>
+              </tr>
+              <tr data-position="forward">
+                <td data-cell="number" data-value="29" class="stat-num">29</td>
+                <td data-cell="player" data-value="Hamza Abdelkarim">Hamza Abdelkarim</td>
+                <td data-cell="position" data-value="Forward">Forward</td>
+                <td><a href="https://www.fcbarcelona.com/en/football/first-team/players/572280/hamza-mohamed-abdelkarim-elsayed-selim" rel="noopener">Profile<span class="visually-hidden">: Hamza Abdelkarim</span></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="chart-wrap" style="margin: 1.75rem 0 0;">
+          <figcaption id="chart-caption">Players by position (updates with the filter above)</figcaption>
+          <svg id="stat-chart" aria-labelledby="chart-caption" width="100%" height="260" role="img"></svg>
+          <p class="visually-hidden">A text summary of this chart's data is available in the table below it and in the sortable table above.</p>
+        </figure>
+
+        <div class="table-scroll" style="margin-top:1.75rem;">
+          <table>
+            <caption>Share of the squad by position</caption>
+            <thead>
+              <tr><th scope="col">Position</th><th scope="col">Players</th><th scope="col">Share of squad</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Goalkeepers</th><td class="stat-num">3</td><td class="stat-num">11.1%</td></tr>
+              <tr><th scope="row">Defenders</th><td class="stat-num">8</td><td class="stat-num">29.6%</td></tr>
+              <tr><th scope="row">Midfielders</th><td class="stat-num">8</td><td class="stat-num">29.6%</td></tr>
+              <tr><th scope="row">Forwards</th><td class="stat-num">8</td><td class="stat-num">29.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <h2 id="finder-heading">Quick finder</h2>
+        <p>Look up a player or a member of the coaching staff by name. Try "Pedri," "Flick," or "de."</p>
+
+        <form id="finder-form" class="filter-form" style="align-items:flex-start;">
+          <div class="filter-field">
+            <label for="finder-query">Search by name</label>
+            <input type="text" id="finder-query" name="query" placeholder="e.g. Pedri or Flick" autocomplete="off" aria-describedby="finder-error" />
+            <p id="finder-error" class="field-error" hidden>Enter a player or staff name to search for.</p>
+          </div>
+
+          <div class="filter-field">
+            <label for="finder-type">Look in</label>
+            <select id="finder-type" name="type">
+              <option value="all">Players and staff</option>
+              <option value="player">Players only</option>
+              <option value="staff">Coaching staff only</option>
+            </select>
+          </div>
+
+          <fieldset class="filter-field" style="border:none; padding:0; margin:0;">
+            <legend style="font-weight:700; font-size:0.85rem; margin-bottom:0.35rem;">Match type</legend>
+            <label style="font-weight:500; display:inline-flex; align-items:center; gap:0.3em; margin-right:1em;">
+              <input type="radio" name="matchType" value="contains" checked /> Contains
+            </label>
+            <label style="font-weight:500; display:inline-flex; align-items:center; gap:0.3em;">
+              <input type="radio" name="matchType" value="starts" /> Starts with
+            </label>
+          </fieldset>
+
+          <button class="btn btn-primary" type="submit" style="align-self:flex-end;">Search</button>
+        </form>
+
+        <p id="finder-status" role="status" aria-live="polite" class="result-count"></p>
+        <ul id="finder-results" style="list-style:none; padding:0; max-width:560px; margin-top:0.5rem;"></ul>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="wrap">
+        <h2 id="cta-heading">Want to know who coaches the team?</h2>
+        <p>Meet the staff and see the club's honours.</p>
+        <a class="btn btn-primary" href="club.html">Visit the club page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <h2>About</h2>
+        <p>Blaugrana Squad is an unofficial fan project that lists the FC Barcelona first team in one easy-to-scan place.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="club.html">Club</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#sources">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:tylerrrmalcolm@gmail.com">tylerrrmalcolm@gmail.com</a></li>
+          <li><a class="social-link" href="https://github.com/yaad206/soccer-stats-website" rel="noopener"><svg class="social-icon" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> Blaugrana Squad on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; <span id="footer-year">2026</span> Blaugrana Squad. Unofficial fan project, not affiliated with or endorsed by FC Barcelona or LaLiga.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
